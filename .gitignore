@@ -1,0 +1,4 @@
+venv39/
+__pycache__/
+.vscode/
+*.pyc
