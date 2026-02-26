@@ -112,9 +112,11 @@ def main():
             while not beep_stop.is_set():
                 try:
                     winsound.Beep(1000, 200)
+                    print("beep sound on")
                 except Exception:
                     break
                 if beep_stop.wait(0.1):
+                    print("beep sound off")
                     break
 
         def start_beep():
@@ -171,6 +173,7 @@ def main():
                             duration = now - closed_start
                             if duration >= BLINK_MIN_TIME:
                                 blink_count += 1
+                                print("blink ",blink_count)
                         closed_start = None
                         was_closed = False
                         long_close_beeped = False
